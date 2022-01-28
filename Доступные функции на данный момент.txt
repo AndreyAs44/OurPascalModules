@@ -1,0 +1,4 @@
+Модуль OurMath:
+-Возведение в степень. OurPower(число:real, степень:integer): real
+-Площадь кольца. OurCircleS(радиус:real, радиус:real): real
+-Сумма цифр числа. 
