@@ -1,23 +1,20 @@
-﻿unit OurMath; // название модуля. должно совпадать с названием файла
+﻿unit OurMath; // module name. must match the file name
 
-interface // просто пишем после этого функции которые доступны и их описание (возвр значение и параметры)
+interface // just write after that the functions that are available and their description (return value and parameters)
+
 function OurPower(sa: real; sb: integer): real;
-function OurCircleS(rad1, rad2: real): real;
+function OurRingArea(rad1, rad2: real): real;
+function OurSumOfDigits(x: integer): integer;
 
-implementation // после этого пишем как они работают (писать памаетры не надо, ток возвр знач если надо. После функции можно писать вар
-// площадь кольца
-function OurCircleS: real; 
-begin
-  OurCircleS := pi * (rad1 * rad1 - rad2 * rad2);
-end;
-
-// возведение в степень,поддержка отрицания
+implementation // after that, we write how they work (you don't need to write pamphlets, the current will return if necessary. After the function, you can write var
+// exponentiation, support for negation
 function OurPower: real;
-var i: integer; x: real;
+var
+  i: integer; x: real;
 begin
   x := sa;
   if sb = 0 then OurPower := 1
-  else if sb<0 then
+  else if sb < 0 then
   begin
     for i := 2 to abs(sb) do sa := sa * x;
     OurPower := 1 / sa;
@@ -28,5 +25,23 @@ begin
     OurPower := sa;
   end
 end;
-end. // конец интерфейса
+// the area of the ring
+function OurRingArea: real;
+begin
+  OurRingArea := pi * (rad2 * rad2 - rad1 * rad1);
+end;
+// the sum of the digits of the number
+function OurSumOfDigits: integer;
+var
+  s: integer;
+begin
+  s := 0;
+  while x > 10 do
+  begin
+    s := s + (x mod 10);
+    x := x div 10;
+  end;
+  OurSumOfDigits := s + x;
+end;
+end. // end of the interface
 

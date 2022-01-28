@@ -1,6 +1,6 @@
 Подключение модуля смотрите в корневой папке (README.md)
 
 Модуль OurMath:
--Возведение в степень. OurPower(число:real, степень:integer): real
--Площадь кольца. OurCircleS(радиус:real, радиус:real): real
--Сумма цифр числа. 
+-Возведение в любую целую степень. OurPower(число:real, степень:integer): real
+-Площадь кольца. OurRingArea(радиус внутр.:real, радиус внеш.:real): real
+-Сумма цифр целого числа. OurSumOfDigits(число: integer): integer;
