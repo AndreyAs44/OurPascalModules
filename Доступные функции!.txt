@@ -1,3 +1,5 @@
+Подключение модуля смотрите в корневой папке (README.md)
+
 Модуль OurMath:
 -Возведение в степень. OurPower(число:real, степень:integer): real
 -Площадь кольца. OurCircleS(радиус:real, радиус:real): real
