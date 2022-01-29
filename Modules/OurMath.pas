@@ -5,6 +5,7 @@ interface // just write after that the functions that are available and their de
 function OurPower(sa: real; sb: integer): real;
 function OurRingArea(rad1, rad2: real): real;
 function OurSumOfDigits(x: integer): integer;
+function OurNod(one, two: integer): integer;
 
 implementation // after that, we write how they work (you don't need to write pamphlets, the current will return if necessary. After the function, you can write var
 // exponentiation, support for negation
@@ -43,5 +44,21 @@ begin
   end;
   OurSumOfDigits := s + x;
 end;
+//Nod
+function OurNod: integer;
+var
+  a, b, c: integer;
+begin
+  a := one;
+  b := two; 
+  repeat
+    if a > b then
+      a := a mod b
+    else
+      b := b mod a;
+  until (a = 0) or (b = 0);
+  OurNod := a + b;
+end;
+
 end. // end of the interface
 
