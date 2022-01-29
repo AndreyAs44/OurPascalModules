@@ -1,7 +1,23 @@
 Подключение модуля смотрите в корневой папке (README.md)
+Все модули используется в Tests.pas. Соответсвенно там можно посмотреть примеры их использования
 
 Модуль OurMath:
 -Возведение в любую целую степень. OurPower(число: real, степень: integer): real
 -Площадь кольца. OurRingArea(радиус внутр.: real, радиус внеш.: real): real
 -Сумма цифр целого числа. OurSumOfDigits(число: integer): integer
 -НОД. Только положительные. OurNod(число1: integer, число2: integer): integer
+-Факториал. OurFactorial(факториал!: integer): integer;э
+-Сумма факториалов. OurFactorialSum(сумма_до_факториал!: integer): integer;
+
+!!!Для модулей OurArray и OurMatrix!!!
+в данных модулях используются процедуры для работы с массивами/матрицами. Для того чтобы процедура изменяла массив, нужно указать тип arrays/matrix. У данных массивов/матриц ограничение в 200 чисел, но вы можете это менять в модуле (const max = ..). Размер массива/матрицы точно также задается через процедуру числом N/N,M
+
+Модуль OurArray:
+-Заполнение массива пользователем. OurUserFillingArray(N: integer; var ваш_массив: Arrays);
+-Заполнение массива рандомными числами (по умолчанию до 100, меняется в константе RandNum). OurRandomFillingArray(N: integer; var ваш_массив: Arrays);
+-Вывод массива. OurArrayOutput(N: integer; var ваш_массив: Arrays);
+
+Модуль OurMatrix:
+-Заполнение матрицы пользователем. OurUserFillingMatrix(n, m: integer; var ваша_матрица: matrix);
+-Заполнение матрицы рандомными числами (по умолчанию до 100, меняется в константе RandNum). OurRandomFillingMatrix(n, m: integer; var ваша_матрица: matrix);
+-Вывод матрицы. OurMatrixOutput(n, m: integer; var ваша_матрица: matrix);

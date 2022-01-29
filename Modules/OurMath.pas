@@ -6,6 +6,8 @@ function OurPower(sa: real; sb: integer): real;
 function OurRingArea(rad1, rad2: real): real;
 function OurSumOfDigits(x: integer): integer;
 function OurNod(one, two: integer): integer;
+function OurFactorial(fac: integer): integer;
+function OurFactorialSum(fac: integer): integer;
 
 implementation // after that, we write how they work (you don't need to write pamphlets, the current will return if necessary. After the function, you can write var
 // exponentiation, support for negation
@@ -59,6 +61,28 @@ begin
   until (a = 0) or (b = 0);
   OurNod := a + b;
 end;
-
+// factorial
+function OurFactorial: Integer;
+var
+  i, f: Integer;
+begin
+  f := 1;
+  for i := 2 to fac do f := f * i;
+  OurFactorial := f
+end;
+// factorial, summa
+function OurFactorialSum: Integer;
+var
+  i, f, s: Integer;
+begin
+  f := 1;
+  s := 1;
+  for i := 2 to fac do 
+  begin
+    f := f * i;
+    s := s + f;
+  end;
+  OurFactorialSum := s;
+end;
 end. // end of the interface
 
