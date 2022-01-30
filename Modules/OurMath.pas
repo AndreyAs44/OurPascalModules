@@ -8,6 +8,8 @@ function OurSumOfDigits(x: integer): integer;
 function OurNod(one, two: integer): integer;
 function OurFactorial(fac: integer): integer;
 function OurFactorialSum(fac: integer): integer;
+function OurHeron(a, b, c: real): real;
+function OurLengthByXy(x1, y1, x2, y2: real): real;
 
 implementation // after that, we write how they work (you don't need to write pamphlets, the current will return if necessary. After the function, you can write var
 // exponentiation, support for negation
@@ -83,6 +85,19 @@ begin
     s := s + f;
   end;
   OurFactorialSum := s;
+end;
+// formula Heron's
+function OurHeron: real;
+var
+  pp: real;
+begin
+  pp := (a + b + c) / 2;
+  OurHeron := sqrt(pp * (pp - a) * (pp - b) * (pp - c));
+end;
+//finding the length by coordinates
+function OurLengthByXy: real;
+begin
+  OurLengthByXy := sqrt(sqr(x2 - x1) + sqr(y2 - y1));
 end;
 end. // end of the interface
 

@@ -17,35 +17,35 @@ implementation
 // User Filling Matrix
 procedure OurUserFillingMatrix;
 var
-  i, j: integer; // indexes
+  i, j: integer;
 begin
   Writeln;
   Writeln('Input matrix ', n, 'x', m, ':');
-  for i := 1 to n do // iterating the lines
-    for j := 1 to m do // iterating the elements in a row
-      readln(matr[i, j]); // keyboard input
+  for i := 1 to n do
+    for j := 1 to m do
+      readln(matr[i, j]);
 end;
 // Random Filling Matrix
 procedure OurRandomFillingMatrix;
 var
-  i, j: integer; // indexes
+  i, j: integer;
 begin
   Randomize();
-  for i := 1 to n do // iterating the lines
-    for j := 1 to m do // iterating the elements in a row
+  for i := 1 to n do
+    for j := 1 to m do
       matr[i, j] := Random(RandNum);
 end;
 // Matrix Output
 procedure OurMatrixOutput;
 var
-  i, j: integer; // indexes
+  i, j: integer;
 begin
   Writeln;
   Writeln('Output matrix ', n, 'x', m, ':');
-  for i := 1 to n do // iterating the lines
+  for i := 1 to n do
   begin
-    for j := 1 to m do // iterating the elements in a row
-      write(matr[i, j], ' '); // output
+    for j := 1 to m do 
+      write(matr[i, j], ' ');
     Writeln;
   end; 
 end;

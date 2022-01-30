@@ -8,21 +8,23 @@ var
   arr: arrays;
 
 begin
-  //математика (в комментариях требуемые результаты тестов)
+  //test OurMath
   Writeln(OurPower(2, 3)); // 8
   Writeln(OurRingArea(2, 3)); // 15.707963267949
   Writeln(OurSumOfDigits(231)); // 6
   Writeln(OurNod(33, 6)); // 3
   Writeln(OurFactorial(5)); // 120
   Writeln(OurFactorialSum(3)); // 9
+  Writeln(OurHeron(2, 3, 4)); // 2.90473750965556
+  Writeln(OurLengthByXy(3, 3, 4, 4)); // 1.4142135623731
   
-  //тест модуля массивов
+  //test OurArray
   OurRandomFillingArray(N, arr);
   OurArrayOutput(N, arr);
   OurUserFillingArray(N, arr);
   OurArrayOutput(N, arr);
   
-  //тест модуля матриц
+  //test OurMatrix
   OurRandomFillingMatrix(N, M, matr);
   OurMatrixOutput(N, M,  matr);
   OurUserFillingMatrix(N, M, matr);

@@ -17,30 +17,30 @@ implementation
 // User Filling Array
 procedure OurUserFillingArray;
 var
-  i: integer; // index
+  i: integer;
 begin
   Writeln;
   Writeln('Input array ', n, 'x:');
-  for i := 1 to n do // iterating the elements 
-    readln(arr[i]); // keyboard input
+  for i := 1 to n do
+    readln(arr[i]);
 end;
 // Random Filling Array
 procedure OurRandomFillingArray;
 var
-  i: integer; // index
+  i: integer;
 begin
   Randomize();
-  for i := 1 to n do // iterating the elements 
-    arr[i] := Random(RandNum); // random
+  for i := 1 to n do
+    arr[i] := Random(RandNum);
 end;
 // Array Output
 procedure OurArrayOutput;
 var
-  i: integer; // index
+  i: integer;
 begin
   Writeln;
   Writeln('Output array ', n, 'x:');
-  for i := 1 to n do // iterating the elements
+  for i := 1 to n do
     Write(arr[i], ' ');
   
   Writeln;
