@@ -15,7 +15,7 @@ procedure OurMatrixOutput(n, m: integer; var matr: matrix);
 
 implementation
 // User Filling Matrix
-procedure OurUserFillingMatrix;
+procedure OurUserFillingMatrix(n, m: integer; var matr: matrix);
 var
   i, j: integer;
 begin
@@ -26,7 +26,7 @@ begin
       readln(matr[i, j]);
 end;
 // Random Filling Matrix
-procedure OurRandomFillingMatrix;
+procedure OurRandomFillingMatrix(n, m: integer; var matr: matrix);
 var
   i, j: integer;
 begin
@@ -36,7 +36,7 @@ begin
       matr[i, j] := Random(RandNum);
 end;
 // Matrix Output
-procedure OurMatrixOutput;
+procedure OurMatrixOutput(n, m: integer; var matr: matrix);
 var
   i, j: integer;
 begin

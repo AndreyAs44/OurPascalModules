@@ -10,13 +10,15 @@ function OurFactorial(fac: integer): integer;
 function OurFactorialSum(fac: integer): integer;
 function OurHeron(a, b, c: real): real;
 function OurLengthByXy(x1, y1, x2, y2: real): real;
-function OurDecToNumSys(num: longint; sys: integer): longint;
+function OurDecToNumSys(num, sys: integer): integer;
+function OurNumSysToDec(num, sys: integer): integer;
 
 implementation // after that, we write how they work (you don't need to write pamphlets, the current will return if necessary. After the function, you can write var
 // exponentiation, support for negation
-function OurPower: real;
+function OurPower(sa: real; sb: integer): real;
 var
-  i: integer; x: real;
+  i: integer;
+  x: real;
 begin
   x := sa;
   if sb = 0 then OurPower := 1
@@ -32,12 +34,12 @@ begin
   end
 end;
 // the area of the ring
-function OurRingArea: real;
+function OurRingArea(rad1, rad2: real): real;
 begin
   OurRingArea := pi * (rad2 * rad2 - rad1 * rad1);
 end;
 // the sum of the digits of the number
-function OurSumOfDigits: integer;
+function OurSumOfDigits(x: integer): integer;
 var
   s: integer;
 begin
@@ -50,7 +52,7 @@ begin
   OurSumOfDigits := s + x;
 end;
 //Nod
-function OurNod: integer;
+function OurNod(one, two: integer): integer;
 var
   a, b, c: integer;
 begin
@@ -65,7 +67,7 @@ begin
   OurNod := a + b;
 end;
 // factorial
-function OurFactorial: Integer;
+function OurFactorial(fac: integer): integer;
 var
   i, f: Integer;
 begin
@@ -74,7 +76,7 @@ begin
   OurFactorial := f
 end;
 // factorial, summa
-function OurFactorialSum: Integer;
+function OurFactorialSum(fac: integer): integer;
 var
   i, f, s: Integer;
 begin
@@ -88,7 +90,7 @@ begin
   OurFactorialSum := s;
 end;
 // formula Heron's
-function OurHeron: real;
+function OurHeron(a, b, c: real): real;
 var
   pp: real;
 begin
@@ -96,17 +98,17 @@ begin
   OurHeron := sqrt(pp * (pp - a) * (pp - b) * (pp - c));
 end;
 //finding the length by coordinates
-function OurLengthByXy: real;
+function OurLengthByXy(x1, y1, x2, y2: real): real;
 begin
   OurLengthByXy := sqrt(sqr(x2 - x1) + sqr(y2 - y1));
 end;
 // DecToNumSys
-function OurDecToNumSys: longint;
+function OurDecToNumSys(num, sys: integer): integer;
 var
   s, zn: string;
   code, nn: integer;
 begin
-  zn := '0123456789';
+  zn := '0123456789ABCDEF';
   s := '';
   while num > 0 do
   begin
@@ -115,6 +117,26 @@ begin
   end;
   Val(s, nn, code);
   OurDecToNumSys := nn;
+end;
+// NumSysToDec
+function OurNumSysToDec(num, sys: integer): integer;
+var
+  i, y, x, n, k: integer;
+  s: real;
+begin
+  x := num;
+  k := num;
+  while x > 0 do
+  begin
+    x := x div 10;
+    inc(y);
+  end;
+  for i := 0 to y - 1 do
+  begin
+    s := (k mod 10) * OurPower(sys, i) + s;
+    k := k div 10;
+  end;
+  OurNumSysToDec := round(s);
 end;
 end. // end of the interface
 

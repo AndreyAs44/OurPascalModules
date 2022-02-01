@@ -1,7 +1,8 @@
 ﻿uses OurMath, OurArray, OurMatrix;
 
 const
-  N = 2; M = 3;
+  N = 2;
+  M = 3;
 
 var
   matr: matrix;
@@ -17,7 +18,8 @@ begin
   Writeln(OurFactorialSum(3)); // 9
   Writeln(OurHeron(2, 3, 4)); // 2.90473750965556
   Writeln(OurLengthByXy(3, 3, 4, 4)); // 1.4142135623731\
-  Writeln(OurDecToNumSys(20, 2)); // 24
+  Writeln(OurDecToNumSys(20, 16)); // 14
+  Writeln(OurNumSysToDec(10100, 2)); // 20
   
   //test OurArray
   OurRandomFillingArray(N, arr);
@@ -27,7 +29,7 @@ begin
   
   //test OurMatrix
   OurRandomFillingMatrix(N, M, matr);
-  OurMatrixOutput(N, M,  matr);
+  OurMatrixOutput(N, M, matr);
   OurUserFillingMatrix(N, M, matr);
-  OurMatrixOutput(N, M,  matr);
+  OurMatrixOutput(N, M, matr);
 end.

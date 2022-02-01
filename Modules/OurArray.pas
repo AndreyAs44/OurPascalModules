@@ -15,7 +15,7 @@ procedure OurArrayOutput(n: integer; var arr: Arrays);
 
 implementation
 // User Filling Array
-procedure OurUserFillingArray;
+procedure OurUserFillingArray(n: integer; var arr: Arrays);
 var
   i: integer;
 begin
@@ -25,7 +25,7 @@ begin
     readln(arr[i]);
 end;
 // Random Filling Array
-procedure OurRandomFillingArray;
+procedure OurRandomFillingArray(n: integer; var arr: Arrays);
 var
   i: integer;
 begin
@@ -34,7 +34,7 @@ begin
     arr[i] := Random(RandNum);
 end;
 // Array Output
-procedure OurArrayOutput;
+procedure OurArrayOutput(n: integer; var arr: Arrays);
 var
   i: integer;
 begin
