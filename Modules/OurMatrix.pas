@@ -3,21 +3,21 @@
 interface
 
 const
-  Max = 200; //MAX SIZE MATRIX!!! YOU CAN CHANGE NUM
+  Max = 9999; //MAX SIZE MATRIX!!! YOU CAN CHANGE NUM
   RandNum = 100;
 
 type
-  Matrix = array[1..max, 1..max] of real;
+  Matrix = array[1..max, 1..max] of double;
 
-procedure OurUserFillingMatrix(n, m: integer; var matr: matrix);
-procedure OurRandomFillingMatrix(n, m: integer; var matr: matrix);
-procedure OurMatrixOutput(n, m: integer; var matr: matrix);
+procedure OurUserFillingMatrix(n, m: int64; var matr: matrix);
+procedure OurRandomFillingMatrix(n, m: int64; var matr: matrix);
+procedure OurMatrixOutput(n, m: int64; var matr: matrix);
 
 implementation
 // User Filling Matrix
-procedure OurUserFillingMatrix(n, m: integer; var matr: matrix);
+procedure OurUserFillingMatrix(n, m: int64; var matr: matrix);
 var
-  i, j: integer;
+  i, j: int64;
 begin
   Writeln;
   Writeln('Input matrix ', n, 'x', m, ':');
@@ -26,9 +26,9 @@ begin
       readln(matr[i, j]);
 end;
 // Random Filling Matrix
-procedure OurRandomFillingMatrix(n, m: integer; var matr: matrix);
+procedure OurRandomFillingMatrix(n, m: int64; var matr: matrix);
 var
-  i, j: integer;
+  i, j: int64;
 begin
   Randomize();
   for i := 1 to n do
@@ -36,9 +36,9 @@ begin
       matr[i, j] := Random(RandNum);
 end;
 // Matrix Output
-procedure OurMatrixOutput(n, m: integer; var matr: matrix);
+procedure OurMatrixOutput(n, m: int64; var matr: matrix);
 var
-  i, j: integer;
+  i, j: int64;
 begin
   Writeln;
   Writeln('Output matrix ', n, 'x', m, ':');

@@ -2,26 +2,26 @@
 Все модули используется в Tests.pas. Соответсвенно там можно посмотреть примеры их использования
 
 Модуль OurMath:
--Возведение в любую целую степень. OurPower(число: real, степень: integer): real
--Площадь кольца. OurRingArea(радиус внутр.: real, радиус внеш.: real): real
--Сумма цифр целого числа. OurSumOfDigits(число: integer): integer
--НОД. Только положительные. OurNod(число1: integer, число2: integer): integer
--Факториал. OurFactorial(факториал!: integer): integer;э
--Сумма факториалов. OurFactorialSum(сумма_до_факториал!: integer): integer;
--Площ. треугол. по трем сторонам (формула герона). OurHeron(a, b, c: real): real;
--Длина отрезка по координатам. OurLengthByXy(x1, y1, x2, y2: real): real;
--Перевод из десятичной в 2-9 чную. OurDecToNumSys(число: integer; в_систему: integer): integer;
--Перевод из сс в десятичную. OurNumSysToDec(число, его_система_счисления: integer): integer;
+-Возведение в любую целую степень. OurPower(число: double, степень: int64): double
+-Площадь кольца. OurRingArea(радиус внутр.: double, радиус внеш.: double): double
+-Сумма цифр целого числа. OurSumOfDigits(число: int64): int64
+-НОД. Только положительные. OurNod(число1: int64, число2: int64): int64
+-Факториал. OurFactorial(факториал!: int64): int64;э
+-Сумма факториалов. OurFactorialSum(сумма_до_факториал!: int64): int64;
+-Площ. треугол. по трем сторонам (формула герона). OurHeron(a, b, c: double): double;
+-Длина отрезка по координатам. OurLengthByXy(x1, y1, x2, y2: double): double;
+-Перевод из десятичной в 2-16 чную. OurDecToNumSys(число: int64; в_систему: int64): string;
+-Перевод из сс в десятичную. OurNumSysToDec(число, его_система_счисления: int64): int64;
 
 !!!Для модулей OurArray и OurMatrix!!!
 в данных модулях используются процедуры для работы с массивами/матрицами. Для того чтобы процедура изменяла массив, нужно указать тип arrays/matrix. У данных массивов/матриц ограничение в 200 чисел, но вы можете это менять в модуле (const max = ..). Размер массива/матрицы точно также задается через процедуру числом N/N,M
 
 Модуль OurArray:
--Заполнение массива пользователем. OurUserFillingArray(N: integer; var ваш_массив: Arrays);
--Заполнение массива рандомными числами (по умолчанию до 100, меняется в константе RandNum). OurRandomFillingArray(N: integer; var ваш_массив: Arrays);
--Вывод массива. OurArrayOutput(N: integer; var ваш_массив: Arrays);
+-Заполнение массива пользователем. OurUserFillingArray(N: int64; var ваш_массив: Arrays);
+-Заполнение массива рандомными числами (по умолчанию до 100, меняется в константе RandNum). OurRandomFillingArray(N: int64; var ваш_массив: Arrays);
+-Вывод массива. OurArrayOutput(N: int64; var ваш_массив: Arrays);
 
 Модуль OurMatrix:
--Заполнение матрицы пользователем. OurUserFillingMatrix(n, m: integer; var ваша_матрица: matrix);
--Заполнение матрицы рандомными числами (по умолчанию до 100, меняется в константе RandNum). OurRandomFillingMatrix(n, m: integer; var ваша_матрица: matrix);
--Вывод матрицы. OurMatrixOutput(n, m: integer; var ваша_матрица: matrix);
+-Заполнение матрицы пользователем. OurUserFillingMatrix(n, m: int64; var ваша_матрица: matrix);
+-Заполнение матрицы рандомными числами (по умолчанию до 100, меняется в константе RandNum). OurRandomFillingMatrix(n, m: int64; var ваша_матрица: matrix);
+-Вывод матрицы. OurMatrixOutput(n, m: int64; var ваша_матрица: matrix);
