@@ -3,7 +3,7 @@
 interface
 
 const
-  Max = 200; //MAX SIZE MATRIX!!! YOU CAN CHANGE NUM
+  Max = 99999; //MAX SIZE MATRIX!!! YOU CAN CHANGE NUM
   RandNum = 100;
 
 type
