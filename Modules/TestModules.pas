@@ -16,7 +16,8 @@ begin
   Writeln(OurFactorial(5)); // 120
   Writeln(OurFactorialSum(3)); // 9
   Writeln(OurHeron(2, 3, 4)); // 2.90473750965556
-  Writeln(OurLengthByXy(3, 3, 4, 4)); // 1.4142135623731
+  Writeln(OurLengthByXy(3, 3, 4, 4)); // 1.4142135623731\
+  Writeln(OurDecToNumSys(20, 2)); // 24
   
   //test OurArray
   OurRandomFillingArray(N, arr);

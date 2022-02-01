@@ -10,6 +10,7 @@ function OurFactorial(fac: integer): integer;
 function OurFactorialSum(fac: integer): integer;
 function OurHeron(a, b, c: real): real;
 function OurLengthByXy(x1, y1, x2, y2: real): real;
+function OurDecToNumSys(num: longint; sys: integer): longint;
 
 implementation // after that, we write how they work (you don't need to write pamphlets, the current will return if necessary. After the function, you can write var
 // exponentiation, support for negation
@@ -98,6 +99,22 @@ end;
 function OurLengthByXy: real;
 begin
   OurLengthByXy := sqrt(sqr(x2 - x1) + sqr(y2 - y1));
+end;
+// DecToNumSys
+function OurDecToNumSys: longint;
+var
+  s, zn: string;
+  code, nn: integer;
+begin
+  zn := '0123456789';
+  s := '';
+  while num > 0 do
+  begin
+    s := zn[num mod sys + 1] + s;
+    num := num div sys;
+  end;
+  Val(s, nn, code);
+  OurDecToNumSys := nn;
 end;
 end. // end of the interface
 
