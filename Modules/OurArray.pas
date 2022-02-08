@@ -21,28 +21,39 @@ var
 begin
   Writeln;
   Writeln('Input array ', n, 'x:');
-  for i := 1 to n do
+  i := 1;
+  while i < n + 1 do
+  begin
     readln(arr[i]);
+    Inc(i);
+  end;    
 end;
 // Random Filling Array
 procedure OurRandomFillingArray(n: int64; var arr: Arrays);
 var
-  i: int64;
+  i: integer;
 begin
   Randomize();
-  for i := 1 to n do
+  i := 1;
+  while i < n + 1 do
+  begin
     arr[i] := Random(RandNum);
+    Inc(i);
+  end; 
 end;
 // Array Output
 procedure OurArrayOutput(n: int64; var arr: Arrays);
 var
-  i: int64;
+  i: integer;
 begin
   Writeln;
   Writeln('Output array ', n, 'x:');
-  for i := 1 to n do
+  i := 1;
+  while i < n + 1 do
+  begin
     Write(arr[i], ' ');
+    Inc(i);
+  end; 
   Writeln;
 end;
-
 end.

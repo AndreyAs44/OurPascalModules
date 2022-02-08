@@ -17,19 +17,29 @@ implementation // after that, we write how they work (you don't need to write pa
 // exponentiation, support for negation
 function OurPower(sa: double; sb: int64): double;
 var
-  i: int64;
+  i: longint;
   x: double;
 begin
   x := sa;
   if sb = 0 then OurPower := 1
   else if sb < 0 then
   begin
-    for i := 2 to abs(sb) do sa := sa * x;
+    i := 2;
+    while i < abs(sb) + 1 do
+    begin
+      sa := sa * x;
+      Inc(i);
+    end;
     OurPower := 1 / sa;
   end
   else
   begin
-    for i := 2 to sb do sa := sa * x;
+    i := 2;
+    while i < sb + 1 do
+    begin
+      sa := sa * x;
+      Inc(i);
+    end;
     OurPower := sa;
   end
 end;
@@ -72,7 +82,12 @@ var
   i, f: Integer;
 begin
   f := 1;
-  for i := 2 to fac do f := f * i;
+  i := 2;
+  while i < fac + 1 do
+  begin
+    f := f * i;
+    Inc(i);
+  end;
   OurFactorial := f
 end;
 // factorial, summa
@@ -82,10 +97,12 @@ var
 begin
   f := 1;
   s := 1;
-  for i := 2 to fac do 
+  i := 2;
+  while i < fac + 1 do
   begin
     f := f * i;
     s := s + f;
+    Inc(i);
   end;
   OurFactorialSum := s;
 end;
@@ -131,11 +148,15 @@ begin
     x := x div 10;
     inc(y);
   end;
-  for i := 0 to y - 1 do
+  
+  i := 0;
+  while i < y do
   begin
     s := (k mod 10) * OurPower(sys, i) + s;
     k := k div 10;
-  end;
+    Inc(i);
+  end; 
+  
   OurNumSysToDec := round(s);
 end;
 end. // end of the interface

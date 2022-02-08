@@ -18,7 +18,7 @@ begin
   Writeln(OurFactorialSum(3)); // 9
   Writeln(OurHeron(2, 3, 4)); // 2.90473750965556
   Writeln(OurLengthByXy(3, 3, 4, 4)); // 1.4142135623731\
-  Writeln(OurDecToNumSys(28477840, 16)); // 14
+  Writeln(OurDecToNumSys(28477840, 16)); // 1b28990
   Writeln(OurNumSysToDec(10100, 2)); // 20
   
   //test OurArray

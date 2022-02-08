@@ -21,9 +21,17 @@ var
 begin
   Writeln;
   Writeln('Input matrix ', n, 'x', m, ':');
-  for i := 1 to n do
-    for j := 1 to m do
+  i := 1;
+  while i < n + 1 do
+  begin
+    j := 1;
+    while j < m + 1 do
+      begin
       readln(matr[i, j]);
+      Inc(j);
+      end; 
+    Inc(i);
+  end; 
 end;
 // Random Filling Matrix
 procedure OurRandomFillingMatrix(n, m: int64; var matr: matrix);
@@ -31,9 +39,17 @@ var
   i, j: int64;
 begin
   Randomize();
-  for i := 1 to n do
-    for j := 1 to m do
+  i := 1;
+  while i < n + 1 do
+  begin
+    j := 1;
+    while j < m + 1 do
+    begin
       matr[i, j] := Random(RandNum);
+      Inc(j);
+      end; 
+    Inc(i);
+  end;
 end;
 // Matrix Output
 procedure OurMatrixOutput(n, m: int64; var matr: matrix);
@@ -42,12 +58,17 @@ var
 begin
   Writeln;
   Writeln('Output matrix ', n, 'x', m, ':');
-  for i := 1 to n do
+  i := 1;
+  while i < n + 1 do
   begin
-    for j := 1 to m do 
+    j := 1;
+    while j < m + 1 do
+    begin
       write(matr[i, j], ' ');
-    Writeln;
-  end; 
+      Inc(j);
+    end; 
+  Writeln;
+  Inc(i);
+  end;
 end;
-
 end.
