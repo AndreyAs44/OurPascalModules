@@ -25,3 +25,11 @@
 -Заполнение матрицы пользователем. OurUserFillingMatrix(n, m: int64; var ваша_матрица: matrix);
 -Заполнение матрицы рандомными числами (по умолчанию до 100, меняется в константе RandNum). OurRandomFillingMatrix(n, m: int64; var ваша_матрица: matrix);
 -Вывод матрицы. OurMatrixOutput(n, m: int64; var ваша_матрица: matrix);
+
+Модуль OurFile:
+---Для записи в массив строк, используется тип strings. Напишите в var:
+strs: strings;. Потом уже передавайте в процедуру  
+-Вывести построчно содержимое файла. OurOutputFile(путь: string);
+-Добавить строку вместо всего файла. OurWriteFile(путь, строка: string);
+-Добавить в конце файла строку. OurAddLine(путь, строка: string);
+-Запись строк в элементы массива. OurWriteInArray(путь: string; var strs: strings);

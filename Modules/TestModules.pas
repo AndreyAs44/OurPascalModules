@@ -1,14 +1,23 @@
-﻿uses OurMath, OurArray, OurMatrix;
+﻿uses OurMath, OurArray, OurMatrix, OurFile;
 
 const
   N = 2;
   M = 3;
+  path = 'C:\Users\as44s\Desktop\Study\Pascal\OurModulesPascal\Modules\TestFile.txt';
 
 var
   matr: matrix;
   arr: arrays;
+  strs: strings;
 
 begin
+  //test OurFiles
+  OurWriteFile(path, 'test');
+  OurAddLine(path, 'test line');
+  OurOutputFile(path); // test   test line
+  OurWriteInArray(path, strs);
+  Writeln(strs[1]); // test
+  
   //test OurMath
   Writeln(OurPower(2, 3)); // 8
   Writeln(OurRingArea(2, 3)); // 15.707963267949
